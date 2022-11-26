@@ -16,7 +16,25 @@ namespace lab1ex6
             Console.WriteLine("z:");
             var z = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Ordinea descrescatoare: " + z +" "+ y + " " + x);
+            if(x > y)
+            {
+                if (z > x)
+                    Console.WriteLine("Ordinea descrescatoare: " + z + " " + x + " " + y);
+                else if (z > y)
+                    Console.WriteLine("Ordinea descrescatoare: " + x + " " + z + " " + y);
+                else
+                    Console.WriteLine("Ordinea descrescatoare: " + x + " " + y + " " + z);
+            }
+            else
+            {
+                if (z > y)
+                    Console.WriteLine("Ordinea descrescatoare: " + z + " " + y + " " + x);
+                else if (z > x)
+                    Console.WriteLine("Ordinea descrescatoare: " + y + " " + z + " " + x);
+                else
+                    Console.WriteLine("Ordinea descrescatoare: " + y + " " + x + " " + z);
+            }
+
         }
     }
 }
